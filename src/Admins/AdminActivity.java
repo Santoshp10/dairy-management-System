@@ -1,7 +1,7 @@
 package Admins;
 
 import Buyer.buyeractivity;
-import Farmer1.farmeractivity;
+import Farmer.farmeractivity;
 import javax.swing.ImageIcon;
 import Main.Admin;
 import Main.Hospital;

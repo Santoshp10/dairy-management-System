@@ -1,6 +1,5 @@
-package Staff;
+package Farmer;
 
-import Farmer.updatefarmer;
 import product.*;
 import Admins.AdminActivity;
 import Main.Hospital;
@@ -10,9 +9,9 @@ import javax.swing.ImageIcon;
  *
  * @author Sajeeb
  */
-public class staffactivity extends javax.swing.JFrame {
+public class farmeractivity extends javax.swing.JFrame {
 
-    public staffactivity() {
+    public farmeractivity() {
         initComponents();
         ImageIcon ic = new ImageIcon(getClass().getResource("/Images/hospital.png"));
         this.setIconImage(ic.getImage());
@@ -49,7 +48,7 @@ public class staffactivity extends javax.swing.JFrame {
 
         jLabel10.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Staff Panel");
+        jLabel10.setText("Farmer Panel");
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/cross.png"))); // NOI18N
         jLabel16.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -140,7 +139,7 @@ public class staffactivity extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Arial", 0, 22)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("manage Staff");
+        jLabel4.setText("manage Farmer");
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel4MouseClicked(evt);
@@ -181,7 +180,7 @@ public class staffactivity extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Arial", 0, 22)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Add Staff");
+        jLabel6.setText("Add Farmer");
         jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel6MouseClicked(evt);
@@ -207,7 +206,7 @@ public class staffactivity extends javax.swing.JFrame {
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel6)))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -224,7 +223,7 @@ public class staffactivity extends javax.swing.JFrame {
 
         jLabel13.setFont(new java.awt.Font("Arial", 0, 22)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("View Staff");
+        jLabel13.setText("View Farmer");
         jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel13MouseClicked(evt);
@@ -250,7 +249,7 @@ public class staffactivity extends javax.swing.JFrame {
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel13)))
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -329,13 +328,13 @@ public class staffactivity extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel17MouseClicked
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
-        addstaff adp = new addstaff();
+        addfarmer adp = new addfarmer();
         adp.setVisible(true);
         dispose();
     }//GEN-LAST:event_jLabel7MouseClicked
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
-        addstaff adp = new addstaff();
+        addfarmer adp = new addfarmer();
         adp.setVisible(true);
         dispose();
     }//GEN-LAST:event_jLabel6MouseClicked
@@ -362,7 +361,7 @@ public class staffactivity extends javax.swing.JFrame {
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(() -> {
-            new staffactivity().setVisible(true);
+            new farmeractivity().setVisible(true);
         });
     }
 

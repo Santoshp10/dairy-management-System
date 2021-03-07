@@ -1,6 +1,6 @@
-package product;
+package Farmer;
 
-
+import product.*;
 import Main.Connector;
 
 import java.awt.HeadlessException;
@@ -18,7 +18,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Sajeeb
  */
-public class updateproduct extends javax.swing.JFrame {
+public class updatefarmer extends javax.swing.JFrame {
 
     Connection connection = null;
     PreparedStatement ps = null;
@@ -35,7 +35,7 @@ public class updateproduct extends javax.swing.JFrame {
     String Password;
 
 
-    public updateproduct() {
+    public updatefarmer() {
         initComponents();
         ImageIcon ic = new ImageIcon(getClass().getResource("/Images/hospital.png"));
         this.setIconImage(ic.getImage());
@@ -90,6 +90,9 @@ public class updateproduct extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jTextField4 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Update Patient !");
@@ -98,7 +101,7 @@ public class updateproduct extends javax.swing.JFrame {
 
         jLabel14.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setText("Update Product");
+        jLabel14.setText("Update Farmer");
 
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/cross.png"))); // NOI18N
         jLabel20.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -121,7 +124,7 @@ public class updateproduct extends javax.swing.JFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(510, 510, 510)
                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 469, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 459, Short.MAX_VALUE)
                 .addComponent(jLabel21)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel20)
@@ -138,13 +141,13 @@ public class updateproduct extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel2.setText("PID");
+        jLabel2.setText("FID");
 
-        jLabel3.setText("Name");
+        jLabel3.setText("Fname");
 
-        jLabel4.setText("Type");
+        jLabel4.setText("Lname");
 
-        jLabel6.setText("Rate");
+        jLabel6.setText("Contact");
 
         jButton1.setText("search");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -167,6 +170,8 @@ public class updateproduct extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setText("Product");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -183,19 +188,23 @@ public class updateproduct extends javax.swing.JFrame {
                                 .addGap(29, 29, 29)
                                 .addComponent(jButton1))
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6))
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel1))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jTextField15, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
                             .addComponent(jTextField4)
                             .addComponent(jTextField6)
-                            .addComponent(jTextField5)))
+                            .addComponent(jTextField5)
+                            .addComponent(jTextField1))
+                        .addGap(178, 178, 178)
+                        .addComponent(jLabel5))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(408, 408, 408)
                         .addComponent(jButton2)
                         .addGap(162, 162, 162)
                         .addComponent(jButton3)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(545, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -211,7 +220,8 @@ public class updateproduct extends javax.swing.JFrame {
                         .addGap(25, 25, 25)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5))
                         .addGap(25, 25, 25)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
@@ -219,7 +229,11 @@ public class updateproduct extends javax.swing.JFrame {
                         .addGap(31, 31, 31)
                         .addComponent(jLabel6))
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2)
@@ -243,23 +257,31 @@ public class updateproduct extends javax.swing.JFrame {
        Boolean Data=false;
 
    
-             String SID=jTextField15.getText();
+             String FID=jTextField15.getText();
 
         try{
  connection = Connector.ConnectDb();
-            ps = connection.prepareStatement("select * from product where PID=?");
+            ps = connection.prepareStatement("select * from farmer1 where FID=?");
 
-            ps.setString(1, SID);
+            ps.setString(1, FID);
             rs = ps.executeQuery();
 
             while (rs.next())
             {
-                jTextField5.setText(rs.getString("Name"));
-                jTextField6.setText(rs.getString("Type"));
-               
-               
-                jTextField4.setText(rs.getString("Rate"));
+                jTextField5.setText(rs.getString("FName"));
+                jTextField6.setText(rs.getString("LName"));
                 
+                 jTextField4.setText(rs.getString("Contact"));
+                jTextField1.setText(rs.getString("Address"));
+                
+                
+                
+                
+                
+                
+                
+               
+   
 
                 Data=true;
             }
@@ -300,10 +322,10 @@ public class updateproduct extends javax.swing.JFrame {
 
             try{
 
-            String sql = "UPDATE product"
-                + " SET Name='"+jTextField5.getText()+"',Type='"+jTextField6.getText()+"',"
-                + "Rate='"+jTextField4.getText()+"'Where PID="+jTextField15.getText();
-
+           
+            String sql = "UPDATE farmer1"
+                + " SET FName='"+jTextField15.getText()+"',LName='"+jTextField6.getText()+"',Contact='"+jTextField4.getText()+"',"
+                + "Address='"+jTextField1.getText()+"'Where FID="+jTextField15.getText();
                 
        
                  connection = Connector.ConnectDb();
@@ -331,7 +353,7 @@ public class updateproduct extends javax.swing.JFrame {
         {
         connection = Connector.ConnectDb();
         String search = jButton3.getText();
-        String sql = "Delete from product where PID =" + jTextField15.getText();
+        String sql = "Delete from farmer1 where FID =" + jTextField15.getText();
         try {
             ps = connection.prepareStatement(sql);
             ps.execute();
@@ -360,14 +382,38 @@ public class updateproduct extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(updateproduct.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(updatefarmer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(updateproduct.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(updatefarmer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(updateproduct.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(updatefarmer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(updateproduct.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(updatefarmer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -379,7 +425,7 @@ public class updateproduct extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new updateproduct().setVisible(true);
+            new updatefarmer().setVisible(true);
         });
     
     }
@@ -387,14 +433,17 @@ public class updateproduct extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
