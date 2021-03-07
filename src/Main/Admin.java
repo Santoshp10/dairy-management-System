@@ -83,7 +83,7 @@ public class Admin extends javax.swing.JFrame {
         mLabel.setBackground(new java.awt.Color(0, 153, 153));
         mLabel.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         mLabel.setForeground(new java.awt.Color(255, 255, 255));
-        mLabel.setText("Hospital Management System");
+        mLabel.setText("Dairy Management System");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -161,7 +161,7 @@ public class Admin extends javax.swing.JFrame {
 
         } catch (HeadlessException | SQLException e) {
 //            JOptionPane.showMessageDialog(null, e);
-            JOptionPane.showMessageDialog(null, "User or Password wrong.");
+            JOptionPane.showMessageDialog(null, "User or Password wrong."+e.toString());
         }
 
     }//GEN-LAST:event_aLoginBtnActionPerformed

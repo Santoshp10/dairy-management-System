@@ -36,7 +36,7 @@ public class Staff extends javax.swing.JFrame {
         rLoginBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Receptionist");
+        setTitle("Staff");
         setResizable(false);
         setSize(new java.awt.Dimension(1000, 550));
         getContentPane().setLayout(null);
@@ -53,12 +53,6 @@ public class Staff extends javax.swing.JFrame {
         dUser.setText("Username:");
         getContentPane().add(dUser);
         dUser.setBounds(262, 168, 116, 29);
-
-        rUserField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rUserFieldActionPerformed(evt);
-            }
-        });
         getContentPane().add(rUserField);
         rUserField.setBounds(388, 168, 279, 29);
 
@@ -66,12 +60,6 @@ public class Staff extends javax.swing.JFrame {
         plbl.setText("Password:");
         getContentPane().add(plbl);
         plbl.setBounds(261, 302, 109, 29);
-
-        rPassField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rPassFieldActionPerformed(evt);
-            }
-        });
         getContentPane().add(rPassField);
         rPassField.setBounds(388, 302, 279, 29);
 
@@ -103,14 +91,6 @@ public class Staff extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void rUserFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rUserFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rUserFieldActionPerformed
-
-    private void rPassFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rPassFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rPassFieldActionPerformed
-
     private void rExitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rExitBtnActionPerformed
         Hompage hospital = new Hompage();
         hospital.setVisible(true);
@@ -139,6 +119,7 @@ public class Staff extends javax.swing.JFrame {
             }
 
         } catch (HeadlessException | SQLException e) {
+            System.out.println(e.getMessage());
             JOptionPane.showMessageDialog(null, "User or Password wrong.");
         }
     }//GEN-LAST:event_rLoginBtnActionPerformed
