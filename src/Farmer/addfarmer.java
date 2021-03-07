@@ -1,7 +1,7 @@
 package Farmer;
 
 import product.*;
-import Main.Hospital;
+import Main.Hompage;
 import Main.Connector;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -321,7 +321,7 @@ public class addfarmer extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel19MouseClicked
 
     private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
-        Hospital hospital = new Hospital();
+        Hompage hospital = new Hompage();
         hospital.setVisible(true);
         dispose();
     }//GEN-LAST:event_jLabel18MouseClicked

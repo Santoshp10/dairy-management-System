@@ -16,7 +16,7 @@ public class Connector {
         try {
 
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mysql?zeroDateTimeBehavior=convertToNull [root on Default schema]", "root", "");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mysql?zeroDateTimeBehavior=convertToNull", "root", "");
 //            JOptionPane.showMessageDialog(null, "Connection Established");
             return connection;
         } catch (ClassNotFoundException | SQLException ex) {

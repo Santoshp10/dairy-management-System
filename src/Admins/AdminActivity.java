@@ -4,7 +4,7 @@ import Buyer.buyeractivity;
 import Farmer.farmeractivity;
 import javax.swing.ImageIcon;
 import Main.Admin;
-import Main.Hospital;
+import Main.Hompage;
 
 
 import Staff.staffactivity;

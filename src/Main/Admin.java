@@ -131,8 +131,8 @@ public class Admin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void dExitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dExitBtnActionPerformed
-        Hospital hospital = new Hospital();
-        hospital.setVisible(true);
+        Hompage home = new Hompage();
+        home.setVisible(true);
         dispose();
     }//GEN-LAST:event_dExitBtnActionPerformed
 

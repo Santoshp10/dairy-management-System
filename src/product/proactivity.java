@@ -1,7 +1,7 @@
 package product;
 
 import Admins.AdminActivity;
-import Main.Hospital;
+import Main.Hompage;
 import javax.swing.ImageIcon;
 
 /**
@@ -315,7 +315,7 @@ public class proactivity extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
-        Hospital hospital = new Hospital();
+        Hompage hospital = new Hompage();
         hospital.setVisible(true);
         dispose();
     }//GEN-LAST:event_jLabel16MouseClicked

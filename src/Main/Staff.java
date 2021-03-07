@@ -10,14 +10,14 @@ import java.awt.HeadlessException;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
-public class Receptionist extends javax.swing.JFrame {
+public class Staff extends javax.swing.JFrame {
 
     PreparedStatement prp = null;
     ResultSet result = null;
     Connection connection = null;
     String username;
 
-    public Receptionist() {
+    public Staff() {
         initComponents();
         ImageIcon ic = new ImageIcon(getClass().getResource("/Images/hospital.png"));
         this.setIconImage(ic.getImage());
@@ -37,7 +37,6 @@ public class Receptionist extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Receptionist");
-        setPreferredSize(new java.awt.Dimension(1000, 550));
         setResizable(false);
         setSize(new java.awt.Dimension(1000, 550));
         getContentPane().setLayout(null);
@@ -46,7 +45,7 @@ public class Receptionist extends javax.swing.JFrame {
         mLabel.setBackground(new java.awt.Color(0, 153, 153));
         mLabel.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         mLabel.setForeground(new java.awt.Color(255, 255, 255));
-        mLabel.setText("Hospital Management System");
+        mLabel.setText("Dairy Management System");
         getContentPane().add(mLabel);
         mLabel.setBounds(0, 34, 1000, 70);
 
@@ -113,7 +112,7 @@ public class Receptionist extends javax.swing.JFrame {
     }//GEN-LAST:event_rPassFieldActionPerformed
 
     private void rExitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rExitBtnActionPerformed
-        Hospital hospital = new Hospital();
+        Hompage hospital = new Hompage();
         hospital.setVisible(true);
         dispose();
     }//GEN-LAST:event_rExitBtnActionPerformed
@@ -145,7 +144,7 @@ public class Receptionist extends javax.swing.JFrame {
     }//GEN-LAST:event_rLoginBtnActionPerformed
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(() -> {
-            new Receptionist().setVisible(true);
+            new Staff().setVisible(true);
         });
     }
 

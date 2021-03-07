@@ -1,7 +1,7 @@
 package product;
 
 import Main.Connector;
-import Main.Hospital;
+import Main.Hompage;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -161,7 +161,7 @@ public class viewproduct extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
-        Hospital hospital = new Hospital();
+        Hompage hospital = new Hompage();
         hospital.setVisible(true);
         dispose();
     }//GEN-LAST:event_jLabel20MouseClicked

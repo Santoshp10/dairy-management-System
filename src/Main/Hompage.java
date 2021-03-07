@@ -6,9 +6,9 @@ import javax.swing.ImageIcon;
  *
  * @author Sajeeb
  */
-public class Hospital extends javax.swing.JFrame {
+public class Hompage extends javax.swing.JFrame {
 
-    public Hospital() {
+    public Hompage() {
         initComponents();
         ImageIcon ic = new ImageIcon(getClass().getResource("/Images/hospital.png"));
         this.setIconImage(ic.getImage());
@@ -249,7 +249,7 @@ public class Hospital extends javax.swing.JFrame {
     }//GEN-LAST:event_adminLabelMouseClicked
 
     private void receptionLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_receptionLabelMouseClicked
-        Receptionist receptionist = new Receptionist();
+        Staff receptionist = new Staff();
         receptionist.setVisible(true);
         dispose();
     }//GEN-LAST:event_receptionLabelMouseClicked
@@ -261,14 +261,14 @@ public class Hospital extends javax.swing.JFrame {
     }//GEN-LAST:event_adminIconMouseClicked
 
     private void receptionIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_receptionIconMouseClicked
-        Receptionist receptionist = new Receptionist();
+        Staff receptionist = new Staff();
         receptionist.setVisible(true);
         dispose();
     }//GEN-LAST:event_receptionIconMouseClicked
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(() -> {
-            new Hospital().setVisible(true);
+            new Hompage().setVisible(true);
         });
     }
 

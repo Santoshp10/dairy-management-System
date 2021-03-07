@@ -36,8 +36,7 @@ public class Doctor extends javax.swing.JFrame {
         dLoginBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Hello Doctor !");
-        setPreferredSize(new java.awt.Dimension(1000, 550));
+        setTitle("Hello Admin!");
         setResizable(false);
         setSize(new java.awt.Dimension(1000, 550));
 
@@ -47,7 +46,7 @@ public class Doctor extends javax.swing.JFrame {
         mLabel.setBackground(new java.awt.Color(0, 153, 153));
         mLabel.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         mLabel.setForeground(new java.awt.Color(255, 255, 255));
-        mLabel.setText("Hospital Management System");
+        mLabel.setText("Dairy Management System");
 
         aUserLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         aUserLabel.setText("Username:");
