@@ -360,7 +360,9 @@ public class staffactivity extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-       
+       updatefarmer vPatient = new updatefarmer();
+        vPatient.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jLabel4MouseClicked
 
     public static void main(String args[]) {

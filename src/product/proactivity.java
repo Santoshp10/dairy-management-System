@@ -339,9 +339,7 @@ public class proactivity extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel6MouseClicked
 
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
-        updateproduct vPatient = new updateproduct();
-        vPatient.setVisible(true);
-        dispose();
+        
     }//GEN-LAST:event_jLabel14MouseClicked
 
     private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
@@ -355,7 +353,9 @@ public class proactivity extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-       
+updateproduct vPatient = new updateproduct();
+        vPatient.setVisible(true);
+        dispose();       
     }//GEN-LAST:event_jLabel4MouseClicked
 
     public static void main(String args[]) {
