@@ -18,7 +18,7 @@ public class Doctor extends javax.swing.JFrame {
 
     public Doctor() {
         initComponents();
-        ImageIcon ic = new ImageIcon(getClass().getResource("/Images/hospital.png"));
+        ImageIcon ic = new ImageIcon(getClass().getResource("/Images/Dairy.png"));
         this.setIconImage(ic.getImage());
     }
 
@@ -136,8 +136,8 @@ public class Doctor extends javax.swing.JFrame {
     }//GEN-LAST:event_dUserFieldActionPerformed
 
     private void dExitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dExitBtnActionPerformed
-        Hospital hospital = new Hospital();
-        hospital.setVisible(true);
+        Dairy Dairy = new Dairy();
+        Dairy.setVisible(true);
         dispose();
     }//GEN-LAST:event_dExitBtnActionPerformed
 

@@ -14,7 +14,7 @@ public class staffactivity extends javax.swing.JFrame {
 
     public staffactivity() {
         initComponents();
-        ImageIcon ic = new ImageIcon(getClass().getResource("/Images/hospital.png"));
+        ImageIcon ic = new ImageIcon(getClass().getResource("/Images/Dairy.png"));
         this.setIconImage(ic.getImage());
     }
 
@@ -162,9 +162,10 @@ public class staffactivity extends javax.swing.JFrame {
                 .addGap(49, 49, 49)
                 .addComponent(jLabel5)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel4Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(17, Short.MAX_VALUE)
                 .addComponent(jLabel4)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -205,9 +206,9 @@ public class staffactivity extends javax.swing.JFrame {
                         .addGap(49, 49, 49)
                         .addComponent(jLabel7))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(22, 22, 22)
                         .addComponent(jLabel6)))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -294,10 +295,12 @@ public class staffactivity extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(102, 102, 102)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(7, 7, 7)
+                                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)))))
                 .addGap(53, 53, 53))
         );
 
@@ -317,8 +320,8 @@ public class staffactivity extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
-        Hompage hospital = new Hompage();
-        hospital.setVisible(true);
+        Hompage Dairy = new Hompage();
+        Dairy.setVisible(true);
         dispose();
     }//GEN-LAST:event_jLabel16MouseClicked
 

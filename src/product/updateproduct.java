@@ -37,7 +37,7 @@ public class updateproduct extends javax.swing.JFrame {
 
     public updateproduct() {
         initComponents();
-        ImageIcon ic = new ImageIcon(getClass().getResource("/Images/hospital.png"));
+        ImageIcon ic = new ImageIcon(getClass().getResource("/Images/Dairy.png"));
         this.setIconImage(ic.getImage());
     }
 //        Object columns[] = {"SID", "Name", "Email", "Phone", "Address", "DOB", "Uname", "Password"};
@@ -92,7 +92,7 @@ public class updateproduct extends javax.swing.JFrame {
         jTextField4 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Update Patient !");
+        setTitle("Update Product !");
 
         jPanel7.setBackground(new java.awt.Color(0, 153, 153));
 

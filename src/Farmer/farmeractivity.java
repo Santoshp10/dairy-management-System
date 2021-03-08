@@ -13,7 +13,7 @@ public class farmeractivity extends javax.swing.JFrame {
 
     public farmeractivity() {
         initComponents();
-        ImageIcon ic = new ImageIcon(getClass().getResource("/Images/hospital.png"));
+        ImageIcon ic = new ImageIcon(getClass().getResource("/Images/Dairy.png"));
         this.setIconImage(ic.getImage());
     }
 
@@ -42,7 +42,7 @@ public class farmeractivity extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Patient Pannel");
+        setTitle("Farmer Pannel");
 
         jPanel3.setBackground(new java.awt.Color(0, 153, 153));
 
@@ -316,8 +316,8 @@ public class farmeractivity extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
-        Hompage hospital = new Hompage();
-        hospital.setVisible(true);
+        Hompage Dairy = new Hompage();
+        Dairy.setVisible(true);
         dispose();
     }//GEN-LAST:event_jLabel16MouseClicked
 

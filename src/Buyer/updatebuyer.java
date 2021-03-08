@@ -38,7 +38,7 @@ public class updatebuyer extends javax.swing.JFrame {
 
     public updatebuyer() {
         initComponents();
-        ImageIcon ic = new ImageIcon(getClass().getResource("/Images/hospital.png"));
+        ImageIcon ic = new ImageIcon(getClass().getResource("/Images/Dairy.png"));
         this.setIconImage(ic.getImage());
     }
 //        Object columns[] = {"SID", "Name", "Email", "Phone", "Address", "DOB", "Uname", "Password"};
@@ -99,7 +99,7 @@ public class updatebuyer extends javax.swing.JFrame {
         jTextField3 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Update Patient !");
+        setTitle("Update Buyer !");
 
         jPanel7.setBackground(new java.awt.Color(0, 153, 153));
 

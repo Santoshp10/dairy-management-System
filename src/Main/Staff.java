@@ -19,7 +19,7 @@ public class Staff extends javax.swing.JFrame {
 
     public Staff() {
         initComponents();
-        ImageIcon ic = new ImageIcon(getClass().getResource("/Images/hospital.png"));
+        ImageIcon ic = new ImageIcon(getClass().getResource("/Images/Dairy.png"));
         this.setIconImage(ic.getImage());
     }
 
@@ -92,8 +92,8 @@ public class Staff extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void rExitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rExitBtnActionPerformed
-        Hompage hospital = new Hompage();
-        hospital.setVisible(true);
+        Hompage Dairy = new Hompage();
+        Dairy.setVisible(true);
         dispose();
     }//GEN-LAST:event_rExitBtnActionPerformed
 

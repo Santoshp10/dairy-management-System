@@ -10,7 +10,7 @@ public class Hompage extends javax.swing.JFrame {
 
     public Hompage() {
         initComponents();
-        ImageIcon ic = new ImageIcon(getClass().getResource("/Images/hospital.png"));
+        ImageIcon ic = new ImageIcon(getClass().getResource("/Images/Dairy.png"));
         this.setIconImage(ic.getImage());
     }
 
@@ -30,11 +30,11 @@ public class Hompage extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Welcome To Hospital Management System");
+        setTitle("Welcome To Dairy Management System");
         setResizable(false);
         setSize(new java.awt.Dimension(800, 480));
 
-        MainF.setName("Welcome To Hospital Management System"); // NOI18N
+        MainF.setName("Welcome To Dairy Management System"); // NOI18N
 
         jPanel1.setBackground(java.awt.Color.lightGray);
 

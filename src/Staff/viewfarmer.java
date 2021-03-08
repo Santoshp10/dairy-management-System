@@ -24,7 +24,7 @@ public class viewfarmer extends javax.swing.JFrame {
 
     public viewfarmer() {
         initComponents();
-        ImageIcon ic = new ImageIcon(getClass().getResource("/Images/hospital.png"));
+        ImageIcon ic = new ImageIcon(getClass().getResource("/Images/Dairy.png"));
         this.setIconImage(ic.getImage());
 
         Object columns[] = {"SID","Name","Email","Phone","DOB","Address","Uname","Password"};
@@ -68,7 +68,7 @@ public class viewfarmer extends javax.swing.JFrame {
         pTable = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("View Patients !");
+        setTitle("View Staff !");
 
         jPanel1.setPreferredSize(new java.awt.Dimension(1260, 575));
 
@@ -162,8 +162,8 @@ public class viewfarmer extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
-        Hompage hospital = new Hompage();
-        hospital.setVisible(true);
+        Hompage Dairy = new Hompage();
+        Dairy.setVisible(true);
         dispose();
     }//GEN-LAST:event_jLabel20MouseClicked
 

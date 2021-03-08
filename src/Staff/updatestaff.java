@@ -37,7 +37,7 @@ public class updatestaff extends javax.swing.JFrame {
 
     public updatestaff() {
         initComponents();
-        ImageIcon ic = new ImageIcon(getClass().getResource("/Images/hospital.png"));
+        ImageIcon ic = new ImageIcon(getClass().getResource("/Images/Dairy.png"));
         this.setIconImage(ic.getImage());
     }
 //        Object columns[] = {"SID", "Name", "Email", "Phone", "Address", "DOB", "Uname", "Password"};
@@ -100,7 +100,7 @@ public class updatestaff extends javax.swing.JFrame {
         dateChooserCombo1 = new datechooser.beans.DateChooserCombo();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Update Patient !");
+        setTitle("Update Staff !");
 
         jPanel7.setBackground(new java.awt.Color(0, 153, 153));
 

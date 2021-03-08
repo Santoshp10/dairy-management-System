@@ -20,7 +20,7 @@ public class addfarmer extends javax.swing.JFrame {
 
     public addfarmer() {
         initComponents();
-        ImageIcon ic = new ImageIcon(getClass().getResource("/Images/hospital.png"));
+        ImageIcon ic = new ImageIcon(getClass().getResource("/Images/Dairy.png"));
         this.setIconImage(ic.getImage());
     }
 
@@ -49,7 +49,7 @@ public class addfarmer extends javax.swing.JFrame {
         jTextField4 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Add Patient");
+        setTitle("Add Farmer");
 
         jPanel5.setBackground(new java.awt.Color(0, 153, 153));
 
@@ -321,8 +321,8 @@ public class addfarmer extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel19MouseClicked
 
     private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
-        Hompage hospital = new Hompage();
-        hospital.setVisible(true);
+        Hompage Dairy = new Hompage();
+        Dairy.setVisible(true);
         dispose();
     }//GEN-LAST:event_jLabel18MouseClicked
 
