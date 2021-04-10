@@ -1,6 +1,7 @@
 package Main;
 
 import javax.swing.ImageIcon;
+import staffpanel.Dashboard;
 
 /**
  *
@@ -198,8 +199,8 @@ public class Hompage extends javax.swing.JFrame {
     }//GEN-LAST:event_adminLabelMouseClicked
 
     private void receptionLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_receptionLabelMouseClicked
-        Staff receptionist = new Staff();
-        receptionist.setVisible(true);
+        Staff ds = new Staff();
+        ds.setVisible(true);
         dispose();
     }//GEN-LAST:event_receptionLabelMouseClicked
 

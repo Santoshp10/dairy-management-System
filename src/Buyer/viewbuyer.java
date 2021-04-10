@@ -27,7 +27,7 @@ public class viewbuyer extends javax.swing.JFrame {
         ImageIcon ic = new ImageIcon(getClass().getResource("/Images/Dairy.png"));
         this.setIconImage(ic.getImage());
 
-        Object columns[] = {"SID","Name","Email","Phone","DOB","Address","Uname","Password"};
+        Object columns[] = {"BID", "Name", "Address", "Email", "Product", "Quantity", "Rate"};
         defaultTableModel.setColumnIdentifiers(columns);
         pTable.setModel(defaultTableModel);
 
@@ -36,16 +36,19 @@ public class viewbuyer extends javax.swing.JFrame {
 
     public void loadData() {
         connection = Connector.ConnectDb();
-        String sql = "select * from product";
+        String sql = "select * from buyer";
         try {
             ps = connection.prepareStatement(sql);
             rs = ps.executeQuery();
             Object columnData[] = new Object[11];
             while (rs.next()) {
-                columnData[0] = rs.getInt("PID");
+                columnData[0] = rs.getInt("BID");
                 columnData[1] = rs.getString("Name");
-                columnData[2] = rs.getString("Type");
-                columnData[3] = rs.getString("Rate");
+                columnData[2] = rs.getString("Address");
+                columnData[3] = rs.getString("Email");
+                columnData[4] = rs.getString("Product");
+                columnData[5] = rs.getString("Quantity");
+                columnData[6] = rs.getString("Rate");
                
              
                 defaultTableModel.addRow(columnData);

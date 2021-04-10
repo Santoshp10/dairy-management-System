@@ -1,4 +1,4 @@
-package Staff;
+package staffpanel;
 
 import product.*;
 import Main.Connector;
@@ -15,19 +15,19 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Sajeeb
  */
-public class viewfarmer extends javax.swing.JFrame {
+public class SR extends javax.swing.JFrame {
 
     Connection connection = null;
     ResultSet rs = null;
     PreparedStatement ps = null;
     DefaultTableModel defaultTableModel = new DefaultTableModel();
 
-    public viewfarmer() {
+    public SR() {
         initComponents();
         ImageIcon ic = new ImageIcon(getClass().getResource("/Images/Dairy.png"));
         this.setIconImage(ic.getImage());
 
-        Object columns[] = {"SID","Name","Email","Phone","DOB","Address","Uname","Password"};
+        Object columns[] = {"PID","Name","Type","Rate"};
         defaultTableModel.setColumnIdentifiers(columns);
         pTable.setModel(defaultTableModel);
 
@@ -68,7 +68,7 @@ public class viewfarmer extends javax.swing.JFrame {
         pTable = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("View Staff !");
+        setTitle("View Patients !");
 
         jPanel1.setPreferredSize(new java.awt.Dimension(1260, 575));
 
@@ -76,7 +76,7 @@ public class viewfarmer extends javax.swing.JFrame {
 
         jLabel14.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setText("View Staff");
+        jLabel14.setText("View Rates");
 
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/cross.png"))); // NOI18N
         jLabel20.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -168,7 +168,7 @@ public class viewfarmer extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel20MouseClicked
 
     private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
-        staffactivity paActivity = new staffactivity();
+        Dashboard paActivity = new Dashboard();
         paActivity.setVisible(true);
         dispose();
     }//GEN-LAST:event_jLabel21MouseClicked
@@ -190,62 +190,14 @@ public class viewfarmer extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(viewfarmer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SR.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(viewfarmer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SR.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(viewfarmer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SR.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(viewfarmer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SR.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -265,7 +217,7 @@ public class viewfarmer extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new viewfarmer().setVisible(true);
+            new SR().setVisible(true);
         });
     }
 

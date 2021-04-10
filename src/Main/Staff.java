@@ -9,6 +9,7 @@ import javax.swing.ImageIcon;
 import java.awt.HeadlessException;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
+import staffpanel.Dashboard;
 
 public class Staff extends javax.swing.JFrame {
 
@@ -37,6 +38,8 @@ public class Staff extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Staff");
+        setMaximizedBounds(new java.awt.Rectangle(0, 0, 1000, 550));
+        setPreferredSize(new java.awt.Dimension(1000, 550));
         setResizable(false);
         setSize(new java.awt.Dimension(1000, 550));
         getContentPane().setLayout(null);
@@ -67,13 +70,15 @@ public class Staff extends javax.swing.JFrame {
         rExitBtn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         rExitBtn.setForeground(new java.awt.Color(255, 255, 255));
         rExitBtn.setText("Home");
+        rExitBtn.setMaximumSize(new java.awt.Dimension(75, 31));
+        rExitBtn.setMinimumSize(new java.awt.Dimension(75, 31));
         rExitBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rExitBtnActionPerformed(evt);
             }
         });
         getContentPane().add(rExitBtn);
-        rExitBtn.setBounds(388, 404, 91, 35);
+        rExitBtn.setBounds(350, 410, 91, 30);
 
         rLoginBtn.setBackground(new java.awt.Color(0, 153, 153));
         rLoginBtn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -85,7 +90,7 @@ public class Staff extends javax.swing.JFrame {
             }
         });
         getContentPane().add(rLoginBtn);
-        rLoginBtn.setBounds(576, 404, 91, 35);
+        rLoginBtn.setBounds(540, 410, 91, 35);
 
         pack();
         setLocationRelativeTo(null);
@@ -102,12 +107,12 @@ public class Staff extends javax.swing.JFrame {
         String user = rUserField.getText();
         String pass = String.valueOf(rPassField.getPassword());
         try {
-            String sql = "select Name , Password from staff where Name='" + user + "'";
+            String sql = "select login , Password from staff where login='" + user + "'";
             prp = connection.prepareStatement(sql);
             result = prp.executeQuery();
             result.first();
             if (pass.equals(result.getString("Password"))) {
-                AdminActivity rActivity = new AdminActivity();
+                Dashboard rActivity = new Dashboard();
                 rActivity.setVisible(true);
                 username = user;
                 rActivity.username = username;

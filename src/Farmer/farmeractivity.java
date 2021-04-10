@@ -346,7 +346,7 @@ public class farmeractivity extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel14MouseClicked
 
     private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
-        viewfarmer vPatient = new viewfarmer();
+        Ff vPatient = new Ff();
         vPatient.setVisible(true);
         dispose();
     }//GEN-LAST:event_jLabel13MouseClicked
@@ -356,7 +356,9 @@ public class farmeractivity extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-       
+        updatefarmer uf  = new updatefarmer();
+        uf.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jLabel4MouseClicked
 
     public static void main(String args[]) {

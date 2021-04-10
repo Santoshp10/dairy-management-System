@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a843791a-17d8-4f41-960f-935fdd6245a5">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="last " class="java.lang.Number" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[SELECT
+     demo.`TID` AS demo_TID,
+     demo.`CID` AS demo_CID,
+     demo.`Name` AS demo_Name,
+     demo.`Product` AS demo_Product,
+     demo.`Quantity` AS demo_Quantity,
+     demo.`Rate` AS demo_Rate,
+     demo.`Amount` AS demo_Amount,
+     farmer1.`FID` AS farmer1_FID,
+     farmer1.`FName` AS farmer1_FName,
+     farmer1.`LName` AS farmer1_LName,
+     farmer1.`Contact` AS farmer1_Contact,
+     farmer1.`Address` AS farmer1_Address
+FROM
+     `demo` demo INNER JOIN `farmer1` farmer1 ON demo.`CID` = farmer1.`FID`
+where TID = 29]]>
+	</queryString>
+	<field name="demo_TID" class="java.lang.Integer"/>
+	<field name="demo_CID" class="java.lang.Integer"/>
+	<field name="demo_Name" class="java.lang.String"/>
+	<field name="demo_Product" class="java.lang.String"/>
+	<field name="demo_Quantity" class="java.lang.Integer"/>
+	<field name="demo_Rate" class="java.lang.Integer"/>
+	<field name="demo_Amount" class="java.lang.Integer"/>
+	<field name="farmer1_FID" class="java.lang.Integer"/>
+	<field name="farmer1_FName" class="java.lang.String"/>
+	<field name="farmer1_LName" class="java.lang.String"/>
+	<field name="farmer1_Contact" class="java.lang.String"/>
+	<field name="farmer1_Address" class="java.lang.String"/>
+	<variable name="demo_TID_1" class="java.lang.Integer" resetType="Page" calculation="Highest">
+		<variableExpression><![CDATA[$F{demo_TID}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="31" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField evaluationTime="Page">
+				<reportElement x="31" y="9" width="100" height="20" uuid="51d6a47c-8f70-4586-b74f-14cf06149683"/>
+				<textFieldExpression><![CDATA[$V{demo_TID_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="39" y="2" width="100" height="20" uuid="c4bda0f8-2271-451b-b7c7-2ebb5e71e8a9"/>
+				<text><![CDATA[demo_Amount]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="49" splitType="Stretch">
+			<textField>
+				<reportElement x="39" y="9" width="100" height="20" uuid="0a2ebd21-f173-41db-96ee-aec385f27fc0"/>
+				<textFieldExpression><![CDATA[$F{demo_Amount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="13" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="16" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="15" splitType="Stretch"/>
+	</summary>
+</jasperReport>

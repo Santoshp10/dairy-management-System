@@ -43,7 +43,7 @@ public class staffactivity extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Patient Pannel");
+        setTitle("Staff Pannel");
 
         jPanel3.setBackground(new java.awt.Color(0, 153, 153));
 
@@ -350,7 +350,7 @@ public class staffactivity extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel14MouseClicked
 
     private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
-        viewfarmer vPatient = new viewfarmer();
+        viewstaff vPatient = new viewstaff();
         vPatient.setVisible(true);
         dispose();
     }//GEN-LAST:event_jLabel13MouseClicked
@@ -360,8 +360,8 @@ public class staffactivity extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-       updatefarmer vPatient = new updatefarmer();
-        vPatient.setVisible(true);
+       updatestaff us = new updatestaff();
+        us.setVisible(true);
         dispose();
     }//GEN-LAST:event_jLabel4MouseClicked
 

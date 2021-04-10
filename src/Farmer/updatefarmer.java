@@ -250,7 +250,9 @@ public class updatefarmer extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel20MouseClicked
 
     private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
-       
+farmeractivity pActivity = new farmeractivity();
+        pActivity.setVisible(true);
+        dispose();       
     }//GEN-LAST:event_jLabel21MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -270,19 +272,8 @@ public class updatefarmer extends javax.swing.JFrame {
             {
                 jTextField5.setText(rs.getString("FName"));
                 jTextField6.setText(rs.getString("LName"));
-                
                  jTextField4.setText(rs.getString("Contact"));
                 jTextField1.setText(rs.getString("Address"));
-                
-                
-                
-                
-                
-                
-                
-               
-   
-
                 Data=true;
             }
         }

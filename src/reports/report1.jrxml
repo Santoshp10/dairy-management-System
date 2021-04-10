@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3a5d3169-7560-420d-b5f0-7038dc15ed1a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     demo.`TID` AS demo_TID,
+     demo.`CID` AS demo_CID,
+     demo.`Name` AS demo_Name,
+     demo.`Product` AS demo_Product,
+     demo.`Quantity` AS demo_Quantity,
+     demo.`Rate` AS demo_Rate,
+     demo.`Amount` AS demo_Amount
+FROM
+     `demo` demo
+where  demo.`TID` =$P{id}]]>
+	</queryString>
+	<field name="demo_TID" class="java.lang.Integer"/>
+	<field name="demo_CID" class="java.lang.Integer"/>
+	<field name="demo_Name" class="java.lang.String"/>
+	<field name="demo_Product" class="java.lang.String"/>
+	<field name="demo_Quantity" class="java.lang.Integer"/>
+	<field name="demo_Rate" class="java.lang.Integer"/>
+	<field name="demo_Amount" class="java.lang.Integer"/>
+	<variable name="demo_Name_1" class="java.lang.Integer" resetType="Column" calculation="Count">
+		<variableExpression><![CDATA[$F{demo_Name}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="86" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="99" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="136" y="41" width="100" height="20" uuid="310eab46-6cfa-4cce-a78d-1220be667a6d"/>
+				<text><![CDATA[demo_Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="258" y="41" width="100" height="20" uuid="40dd1f96-8acc-49c9-9504-e9a56c6c6af6"/>
+				<text><![CDATA[demo_Rate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="383" y="41" width="100" height="20" uuid="dd20a32e-9c5b-455d-ad78-c1f93e480d74"/>
+				<text><![CDATA[demo_Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="41" width="100" height="20" uuid="f38379f2-ecd0-4283-8d62-fcca190eff65"/>
+				<text><![CDATA[demo_Product]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="136" y="19" width="100" height="20" uuid="a16dc03b-0497-4e91-bedf-b0d418ce9b1d"/>
+				<textFieldExpression><![CDATA[$F{demo_Quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="258" y="19" width="100" height="20" uuid="30fb1082-0fbf-4c54-90bc-3245787f65a4"/>
+				<textFieldExpression><![CDATA[$F{demo_Rate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="383" y="19" width="100" height="20" uuid="ca6d375f-e7ec-41fe-afe5-be9a37c467d0"/>
+				<textFieldExpression><![CDATA[$F{demo_Amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="24" y="17" width="100" height="20" uuid="3fdec9b8-2d62-4a1e-a86a-d3e14e740508"/>
+				<textFieldExpression><![CDATA[$F{demo_Product}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

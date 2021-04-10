@@ -265,7 +265,9 @@ public class updatebuyer extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel20MouseClicked
 
     private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
-
+ buyeractivity pActivity = new buyeractivity();
+        pActivity.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jLabel21MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

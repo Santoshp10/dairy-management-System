@@ -49,7 +49,7 @@ public class addfarmer extends javax.swing.JFrame {
         jTextField4 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Add Farmer");
+        setTitle("Add Patient");
 
         jPanel5.setBackground(new java.awt.Color(0, 153, 153));
 
@@ -158,8 +158,6 @@ public class addfarmer extends javax.swing.JFrame {
 
         jLabel3.setText("              Contact");
 
-        jLabel7.setText("jLabel7");
-
         jLabel4.setText("Address");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -204,7 +202,9 @@ public class addfarmer extends javax.swing.JFrame {
                                 .addGap(103, 103, 103)
                                 .addComponent(jLabel5)))
                         .addGap(0, 585, Short.MAX_VALUE))
-                    .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -287,11 +287,10 @@ public class addfarmer extends javax.swing.JFrame {
         connection = Connector.ConnectDb();
         if (connection != null) {
 
-            String name = jTextField1.getText();
-            String Lname = jTextField2.getText();
-
+            String FName = jTextField1.getText();
+            String LName = jTextField2.getText();
             String Contact = jTextField3.getText();
-              String Address = jTextField4.getText();
+            String Address = jTextField4.getText();
            
 
             String sql = "insert into farmer1(FName,LName,Contact,Address) values (?,?,?,?)";
@@ -299,10 +298,9 @@ public class addfarmer extends javax.swing.JFrame {
             try {
                 prp = connection.prepareStatement(sql);
 
-                prp.setString(1,name);
-                prp.setString(2,Lname);
+                prp.setString(1,FName);
+                prp.setString(2,LName);
                 prp.setString(3,Contact);
-                
                 prp.setString(4,Address);
              
                 prp.execute();

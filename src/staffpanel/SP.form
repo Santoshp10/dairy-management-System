@@ -77,9 +77,9 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace pref="500" max="32767" attributes="0"/>
-                      <Component id="jLabel14" min="-2" pref="152" max="-2" attributes="0"/>
-                      <EmptySpace pref="496" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jLabel14" min="-2" pref="199" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
@@ -110,7 +110,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="View Staff"/>
+                <Property name="text" type="java.lang.String" value="View Payments"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel20">
