@@ -315,7 +315,7 @@ farmeractivity pActivity = new farmeractivity();
 
            
             String sql = "UPDATE farmer1"
-                + " SET FName='"+jTextField15.getText()+"',LName='"+jTextField6.getText()+"',Contact='"+jTextField4.getText()+"',"
+                + " SET FName='" +jTextField5.getText()+"',LName='"+jTextField6.getText()+"',Contact='"+jTextField4.getText()+"',"
                 + "Address='"+jTextField1.getText()+"'Where FID="+jTextField15.getText();
                 
        
@@ -348,11 +348,11 @@ farmeractivity pActivity = new farmeractivity();
         try {
             ps = connection.prepareStatement(sql);
             ps.execute();
-            JOptionPane.showMessageDialog(null, "staff " + search + " has been deleted");
+            JOptionPane.showMessageDialog(null, "Farmer " + search + " has been deleted");
           
             connection.close();
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "Doctor named " + search + " not found");
+            JOptionPane.showMessageDialog(null, "Farmer named " + search + " not found");
         }
     }//GEN-LAST:event_jButton3ActionPerformed
     }

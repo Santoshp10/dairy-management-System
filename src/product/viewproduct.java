@@ -26,7 +26,7 @@ public class viewproduct extends javax.swing.JFrame {
         ImageIcon ic = new ImageIcon(getClass().getResource("/Images/Dairy.png"));
         this.setIconImage(ic.getImage());
 
-        Object columns[] = {"SID","Name","Email","Phone","DOB","Address","Uname","Password"};
+        Object columns[] = {"PID","Name","Type","Rate"};
         defaultTableModel.setColumnIdentifiers(columns);
         pTable.setModel(defaultTableModel);
 

@@ -265,7 +265,7 @@ public class updatebuyer extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel20MouseClicked
 
     private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
- buyeractivity pActivity = new buyeractivity();
+        buyeractivity pActivity = new buyeractivity();
         pActivity.setVisible(true);
         dispose();
     }//GEN-LAST:event_jLabel21MouseClicked
@@ -320,9 +320,16 @@ public class updatebuyer extends javax.swing.JFrame {
         if (Data == true) {
 
             try {
-                String sql = "UPDATE buyer SET Name=" + jTextField5.getText() + "',Address='" + jTextField6.getText() + "',Email='" + jTextField4.getText() + 
-                        "',Product='" + jTextField1.getText() + ",Quantity=" + jTextField2.getText() + ",Rate=" + jTextField3.getText() + "Where BID=" + jTextField15.getText();
-/*
+                
+                String sql = "UPDATE buyer"
+                        + " SET Name='" + jTextField5.getText() + "',Address='" + jTextField6.getText() + "',Email='" + jTextField4.getText() + "',"
+                        + "Product='" + jTextField1.getText() + "',Quantity='" + jTextField2.getText() + "',"
+                        + "Rate='" + jTextField3.getText() + "'Where BID=" + jTextField15.getText();
+             
+               /* String sql = "UPDATE buyer"
+                        + "SET Name=" + jTextField5.getText() + ",Address=" + jTextField6.getText() + ",Email=" + jTextField4.getText() + 
+                         "Product=" + jTextField1.getText() + ",Quantity=" + jTextField2.getText() + ",Rate=" + jTextField3.getText() + "Where BID=" + jTextField15.getText();*/
+                /*
 String sql = "UPDATE buyer SET Name='" + jTextField5.getText() + "',Address='" + jTextField6.getText() + "',Email='" + jTextField4.getText() + "',
         + ","+ "Product='" + jTextField1.getText() + "'Quantity='" + jTextField2.getText() + "',"
                         + "Rate='" + jTextField3.getText() + "' Where BID=" + jTextField15.getText();*/
@@ -482,7 +489,5 @@ String sql = "UPDATE buyer SET Name='" + jTextField5.getText() + "',Address='" +
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
-
-    
 
 }

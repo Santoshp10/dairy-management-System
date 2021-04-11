@@ -319,7 +319,7 @@ public class addbuyer extends javax.swing.JFrame {
             String Quantity = jTextField5.getText();
             String Rate = jTextField6.getText();
 
-            String sql = "insert into buyer(Name,Address,Email,Product,Qantity,Rate) values (?,?,?,?,?,?)";
+            String sql = "insert into buyer(Name,Address,Email,Product,Quantity,Rate) values (?,?,?,?,?,?)";
 
             try {
                 prp = connection.prepareStatement(sql);

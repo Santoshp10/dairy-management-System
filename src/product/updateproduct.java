@@ -238,7 +238,9 @@ public class updateproduct extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel20MouseClicked
 
     private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
-       
+ proactivity paActivity = new proactivity();
+        paActivity.setVisible(true);
+        dispose();       
     }//GEN-LAST:event_jLabel21MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -302,7 +304,7 @@ public class updateproduct extends javax.swing.JFrame {
 
             try{
 
-            String sql = "UPDATE product"
+            String sql = "UPDATE product "
                 + " SET Name='"+jTextField5.getText()+"',Type='"+jTextField6.getText()+"',"
                 + "Rate='"+jTextField4.getText()+"'Where PID="+jTextField15.getText();
 
