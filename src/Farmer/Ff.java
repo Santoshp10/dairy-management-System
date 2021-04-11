@@ -36,7 +36,7 @@ public class Ff extends javax.swing.JFrame {
 
     public void loadData() {
         connection = Connector.ConnectDb();
-        String sql = "select * from farmer1";
+        String sql = "select * from farmer";
         try {
             ps = connection.prepareStatement(sql);
             rs = ps.executeQuery();

@@ -426,8 +426,8 @@ public class updatestaff extends javax.swing.JFrame {
 
         if (Data == true) {
             connection = Connector.ConnectDb();
-            String search = jButton3.getText();
-            String sql = "Delete from farmer where SID =" + jTextField15.getText();
+            String search = jTextField15.getText();
+            String sql = "Delete from staff where SID =" + jTextField15.getText();
             try {
                 ps = connection.prepareStatement(sql);
                 ps.execute();
@@ -435,7 +435,7 @@ public class updatestaff extends javax.swing.JFrame {
 
                 connection.close();
             } catch (SQLException e) {
-                JOptionPane.showMessageDialog(null, "Doctor named " + search + " not found");
+                JOptionPane.showMessageDialog(null, "Staff named " + search + " not found");
             }
     }//GEN-LAST:event_jButton3ActionPerformed
     }

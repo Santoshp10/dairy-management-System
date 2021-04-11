@@ -288,7 +288,7 @@ public class addfarmer extends javax.swing.JFrame {
             String Address = jTextField4.getText();
            
 
-            String sql = "insert into farmer1(FName,LName,Contact,Address) values (?,?,?,?)";
+            String sql = "insert into farmer(FName,LName,Contact,Address) values (?,?,?,?)";
 
             try {
                 prp = connection.prepareStatement(sql);

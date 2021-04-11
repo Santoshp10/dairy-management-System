@@ -33,7 +33,7 @@ public class Transaction extends javax.swing.JFrame {
 
     public void loadData() {
         connection = Connector.ConnectDb();
-        String sql = "select * from demo";
+        String sql = "select * from transaction";
         try {
             ps = connection.prepareStatement(sql);
             rs = ps.executeQuery();

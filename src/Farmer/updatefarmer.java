@@ -95,7 +95,7 @@ public class updatefarmer extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Update Farmer !");
+        setTitle("Update Patient !");
 
         jPanel7.setBackground(new java.awt.Color(0, 153, 153));
 
@@ -170,7 +170,7 @@ public class updatefarmer extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Product");
+        jLabel1.setText("Address");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -263,7 +263,7 @@ farmeractivity pActivity = new farmeractivity();
 
         try{
  connection = Connector.ConnectDb();
-            ps = connection.prepareStatement("select * from farmer1 where FID=?");
+            ps = connection.prepareStatement("select * from farmer where FID=?");
 
             ps.setString(1, FID);
             rs = ps.executeQuery();
@@ -314,7 +314,7 @@ farmeractivity pActivity = new farmeractivity();
             try{
 
            
-            String sql = "UPDATE farmer1"
+            String sql = "UPDATE farmer"
                 + " SET FName='" +jTextField5.getText()+"',LName='"+jTextField6.getText()+"',Contact='"+jTextField4.getText()+"',"
                 + "Address='"+jTextField1.getText()+"'Where FID="+jTextField15.getText();
                 
@@ -344,7 +344,7 @@ farmeractivity pActivity = new farmeractivity();
         {
         connection = Connector.ConnectDb();
         String search = jButton3.getText();
-        String sql = "Delete from farmer1 where FID =" + jTextField15.getText();
+        String sql = "Delete from farmer where FID =" + jTextField15.getText();
         try {
             ps = connection.prepareStatement(sql);
             ps.execute();
