@@ -4,7 +4,6 @@ import Buyer.buyeractivity;
 import Farmer.farmeractivity;
 import javax.swing.ImageIcon;
 import Main.Admin;
-import Main.Hompage;
 
 
 import Staff.staffactivity;
@@ -364,7 +363,9 @@ public class AdminActivity extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
-        // TODO add your handling code here:
+       Transaction pro = new Transaction();
+        pro.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jLabel6MouseClicked
 
     public static void main(String args[]) {

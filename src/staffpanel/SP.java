@@ -67,7 +67,7 @@ public class SP extends javax.swing.JFrame {
         pTable = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("View Patients !");
+        setTitle("View Transactions!");
 
         jPanel1.setPreferredSize(new java.awt.Dimension(1260, 575));
 

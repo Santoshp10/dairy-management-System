@@ -5,7 +5,6 @@ import Main.Connector;
 
 import java.awt.HeadlessException;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -92,7 +91,7 @@ public class updateproduct extends javax.swing.JFrame {
         jTextField4 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Update Patient !");
+        setTitle("Update product");
 
         jPanel7.setBackground(new java.awt.Color(0, 153, 153));
 
@@ -240,7 +239,7 @@ public class updateproduct extends javax.swing.JFrame {
     private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
  proactivity paActivity = new proactivity();
         paActivity.setVisible(true);
-        dispose();       
+        dispose();
     }//GEN-LAST:event_jLabel21MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -339,11 +338,11 @@ public class updateproduct extends javax.swing.JFrame {
         try {
             ps = connection.prepareStatement(sql);
             ps.execute();
-            JOptionPane.showMessageDialog(null, "staff " + search + " has been deleted");
+            JOptionPane.showMessageDialog(null, "product " + search + " has been deleted");
           
             connection.close();
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "Doctor named " + search + " not found");
+            JOptionPane.showMessageDialog(null, "product named " + search + " not found");
         }
     }//GEN-LAST:event_jButton3ActionPerformed
     }

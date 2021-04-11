@@ -361,11 +361,11 @@ String sql = "UPDATE buyer SET Name='" + jTextField5.getText() + "',Address='" +
             try {
                 ps = connection.prepareStatement(sql);
                 ps.execute();
-                JOptionPane.showMessageDialog(null, "staff " + search + " has been deleted");
+                JOptionPane.showMessageDialog(null, " Buyer " + search + " has been deleted");
 
                 connection.close();
             } catch (SQLException e) {
-                JOptionPane.showMessageDialog(null, "Doctor named " + search + " not found");
+                JOptionPane.showMessageDialog(null, "Buyer named " + search + " not found");
             }
     }//GEN-LAST:event_jButton3ActionPerformed
     }
