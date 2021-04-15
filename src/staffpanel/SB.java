@@ -333,20 +333,22 @@ public class SB extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Boolean Data = false;
 
-        String FID = jTextField1.getText();
+        String BID = jTextField1.getText();
 
         try {
             connection = Connector.ConnectDb();
-            ps = connection.prepareStatement("select * from farmer1 where FID=?");
+            ps = connection.prepareStatement("select * from buyer where BID=?");
 
-            ps.setString(1, FID);
+            ps.setString(1, BID);
             rs = ps.executeQuery();
 
             while (rs.next()) {
-                jTextField2.setText(rs.getString("FName"));
-                jTextField3.setText(rs.getString("LName"));
-                jTextField4.setText(rs.getString("Contact"));
-                jTextField5.setText(rs.getString("Address"));
+                jTextField2.setText(rs.getString("Name"));
+                jTextField3.setText(rs.getString("Address"));
+                jTextField4.setText(rs.getString("Email"));
+                jTextField5.setText(rs.getString("Product"));
+                jTextField6.setText(rs.getString("Quantity"));
+                jTextField7.setText(rs.getString("Rate"));
                 Data = true;
             }
         } catch (SQLException | HeadlessException ex) {
@@ -376,9 +378,9 @@ public class SB extends javax.swing.JFrame {
 
             try {
 
-                String sql = "UPDATE farmer1"
-                        + " SET FName='" + jTextField2.getText() + "',LName='" + jTextField3.getText() + "',Contact='" + jTextField4.getText() + "',"
-                        + "Address='" + jTextField5.getText() + "'Where FID=" + jTextField1.getText();
+                String sql = "UPDATE buyer"
+                        + " SET Name='" + jTextField2.getText() + "',Address='" + jTextField3.getText() + "',Email='" + jTextField4.getText() + "',"
+                        + "Product='" + jTextField5.getText() +",Quantity='" + jTextField6.getText() +",Rate='" + jTextField7.getText() + "' Where FID=" + jTextField1.getText();
 
                 connection = Connector.ConnectDb();
                 Statement st;

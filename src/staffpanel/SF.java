@@ -39,7 +39,7 @@ public class SF extends javax.swing.JFrame {
 
     public void loadData() {
         connection = Connector.ConnectDb();
-        String sql = "select * from farmer1";
+        String sql = "select * from farmer";
         try {
             ps = connection.prepareStatement(sql);
             rs = ps.executeQuery();
@@ -313,7 +313,7 @@ public class SF extends javax.swing.JFrame {
 
         try {
             connection = Connector.ConnectDb();
-            ps = connection.prepareStatement("select * from farmer1 where FID=?");
+            ps = connection.prepareStatement("select * from farmer where FID=?");
 
             ps.setString(1, FID);
             rs = ps.executeQuery();
@@ -352,7 +352,7 @@ public class SF extends javax.swing.JFrame {
 
             try {
 
-                String sql = "UPDATE farmer1"
+                String sql = "UPDATE farmer"
                         + " SET FName='" + jTextField2.getText() + "',LName='" + jTextField3.getText() + "',Contact='" + jTextField4.getText() + "',"
                         + "Address='" + jTextField5.getText() + "'Where FID=" + jTextField1.getText();
 
@@ -381,8 +381,8 @@ public class SF extends javax.swing.JFrame {
 
         if (Data == true) {
             connection = Connector.ConnectDb();
-            String search = jButton3.getText();
-            String sql = "Delete from farmer1 where FID =" + jTextField1.getText();
+            String search = jTextField1.getText();
+            String sql = "Delete from farmer where FID =" + jTextField1.getText();
             try {
                 ps = connection.prepareStatement(sql);
                 ps.execute();
@@ -408,7 +408,7 @@ public class SF extends javax.swing.JFrame {
             String Contact = jTextField4.getText();
             String Address = jTextField5.getText();
 
-            String sql = "insert into farmer1(FName,LName,Contact,Address) values (?,?,?,?)";
+            String sql = "insert into farmer(FName,LName,Contact,Address) values (?,?,?,?)";
 
             try {
                 prp = connection.prepareStatement(sql);
