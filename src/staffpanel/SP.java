@@ -32,7 +32,7 @@ public class SP extends javax.swing.JFrame {
 
     public void loadData() {
         connection = Connector.ConnectDb();
-        String sql = "select * from demo";
+        String sql = "select * from bills";
         try {
             ps = connection.prepareStatement(sql);
             rs = ps.executeQuery();

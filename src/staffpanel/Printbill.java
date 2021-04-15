@@ -305,7 +305,7 @@ public class Printbill extends javax.swing.JFrame {
             String Rate =jTextField5.getText();
             String Amount =jTextField6.getText();
 
-            String sql = "insert into demo(CID,Name,Product,Quantity,Rate,Amount) values (?,?,?,?,?,?)";
+            String sql = "insert into bills(CID,Name,Product,Quantity,Rate,Amount) values (?,?,?,?,?,?)";
             System.out.println(sql);
             try {
                 prp = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
