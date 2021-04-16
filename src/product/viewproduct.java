@@ -26,7 +26,7 @@ public class viewproduct extends javax.swing.JFrame {
         ImageIcon ic = new ImageIcon(getClass().getResource("/Images/Dairy.png"));
         this.setIconImage(ic.getImage());
 
-        Object columns[] = {"PID","Name","Type","Rate"};
+        Object columns[] = {"PID","Name","Quantity","Rate"};
         defaultTableModel.setColumnIdentifiers(columns);
         pTable.setModel(defaultTableModel);
 
@@ -43,7 +43,7 @@ public class viewproduct extends javax.swing.JFrame {
             while (rs.next()) {
                 columnData[0] = rs.getInt("PID");
                 columnData[1] = rs.getString("Name");
-                columnData[2] = rs.getString("Type");
+                columnData[2] = rs.getString("Quantity");
                 columnData[3] = rs.getString("Rate");
                
              

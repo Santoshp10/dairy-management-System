@@ -308,7 +308,7 @@ public class addproduct extends javax.swing.JFrame {
 
             String rate = jTextField3.getText();
 
-            String sql = "insert into product(Name,Type,Rate) values (?,?,?)";
+            String sql = "insert into product(Name,Quantity,Rate) values (?,?,?)";
 
             try {
                 prp = connection.prepareStatement(sql);
