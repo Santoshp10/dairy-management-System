@@ -66,7 +66,7 @@ public class Staff extends javax.swing.JFrame {
         getContentPane().add(rPassField);
         rPassField.setBounds(388, 302, 279, 29);
 
-        rExitBtn.setBackground(new java.awt.Color(0, 204, 204));
+        rExitBtn.setBackground(new java.awt.Color(0, 153, 153));
         rExitBtn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         rExitBtn.setForeground(new java.awt.Color(255, 255, 255));
         rExitBtn.setText("Home");
@@ -90,7 +90,7 @@ public class Staff extends javax.swing.JFrame {
             }
         });
         getContentPane().add(rLoginBtn);
-        rLoginBtn.setBounds(540, 410, 91, 35);
+        rLoginBtn.setBounds(540, 410, 91, 30);
 
         pack();
         setLocationRelativeTo(null);

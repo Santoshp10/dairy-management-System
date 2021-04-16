@@ -59,7 +59,7 @@ public class Admin extends javax.swing.JFrame {
             }
         });
 
-        dExitBtn.setBackground(new java.awt.Color(0, 204, 204));
+        dExitBtn.setBackground(new java.awt.Color(0, 153, 153));
         dExitBtn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         dExitBtn.setForeground(new java.awt.Color(255, 255, 255));
         dExitBtn.setText("Home");

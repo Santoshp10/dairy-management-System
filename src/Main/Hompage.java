@@ -31,13 +31,13 @@ public class Hompage extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Welcome To Dairy Management System");
+        setTitle("Welcome To Hospital Management System");
         setResizable(false);
         setSize(new java.awt.Dimension(800, 480));
 
-        MainF.setName("Welcome To Dairy Management System"); // NOI18N
+        MainF.setName("Welcome To Hospital Management System"); // NOI18N
 
-        jPanel1.setBackground(java.awt.Color.lightGray);
+        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
 
         adminIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/admin.png"))); // NOI18N
         adminIcon.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -82,7 +82,7 @@ public class Hompage extends javax.swing.JFrame {
         mLabel.setForeground(new java.awt.Color(255, 255, 255));
         mLabel.setText("Dairy Management System");
 
-        jPanel2.setBackground(java.awt.Color.lightGray);
+        jPanel2.setBackground(new java.awt.Color(0, 153, 153));
         jPanel2.setFocusable(false);
 
         staffIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/reception.png"))); // NOI18N
@@ -122,10 +122,7 @@ public class Hompage extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel4.setBackground(new java.awt.Color(0, 204, 204));
-
-        jLabel1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
         jLabel1.setText("Login as");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -142,7 +139,7 @@ public class Hompage extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jLabel1)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout MainFLayout = new javax.swing.GroupLayout(MainF);

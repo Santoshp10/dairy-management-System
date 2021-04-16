@@ -37,7 +37,7 @@ public class proactivity extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Patient Pannel");
+        setTitle("Product Pannel");
 
         jPanel3.setBackground(new java.awt.Color(0, 153, 153));
 
@@ -86,7 +86,7 @@ public class proactivity extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel4.setBackground(java.awt.Color.lightGray);
+        jPanel4.setBackground(new java.awt.Color(0, 153, 153));
 
         jLabel4.setFont(new java.awt.Font("Arial", 0, 22)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -126,7 +126,7 @@ public class proactivity extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel5.setBackground(java.awt.Color.lightGray);
+        jPanel5.setBackground(new java.awt.Color(0, 153, 153));
         jPanel5.setPreferredSize(new java.awt.Dimension(150, 100));
 
         jLabel6.setFont(new java.awt.Font("Arial", 0, 22)); // NOI18N
@@ -169,7 +169,7 @@ public class proactivity extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel8.setBackground(java.awt.Color.lightGray);
+        jPanel8.setBackground(new java.awt.Color(0, 153, 153));
         jPanel8.setPreferredSize(new java.awt.Dimension(150, 100));
 
         jLabel13.setFont(new java.awt.Font("Arial", 0, 22)); // NOI18N
@@ -237,7 +237,7 @@ public class proactivity extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel15)
-                .addGap(126, 126, 126)
+                .addGap(123, 123, 123)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
