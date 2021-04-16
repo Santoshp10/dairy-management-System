@@ -379,6 +379,7 @@ public class updateproduct extends javax.swing.JFrame {
             jLabel1.setText("This field only accepts numbers");
         } else {
             jTextField6.setEditable(true);
+            jLabel1.setText("");
         }
     }//GEN-LAST:event_jTextField6KeyPressed
 
@@ -390,6 +391,7 @@ public class updateproduct extends javax.swing.JFrame {
             jLabel5.setText("This field only accepts numbers");
         } else {
             jTextField4.setEditable(true);
+            jLabel5.setText("");
         }
     }//GEN-LAST:event_jTextField4KeyPressed
     

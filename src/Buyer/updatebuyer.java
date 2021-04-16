@@ -41,36 +41,7 @@ public class updatebuyer extends javax.swing.JFrame {
         ImageIcon ic = new ImageIcon(getClass().getResource("/Images/Dairy.png"));
         this.setIconImage(ic.getImage());
     }
-//        Object columns[] = {"SID", "Name", "Email", "Phone", "Address", "DOB", "Uname", "Password"};
-//        defaultTableModel.setColumnIdentifiers(columns);
-//        pUTable.setModel(defaultTableModel);
-//        loadData();
-//    }
-//
-//    public void loadData() {
-//        connection = Connector.ConnectDb();
-//        String sql = "select SID,Name,Email,Phone,Address,DOB,Uname,Password from addf";
-//        try {
-//            ps = connection.prepareStatement(sql);
-//            rs = ps.executeQuery();
-//            Object columnData[] = new Object[11];
-//            while (rs.next()) {
-//                columnData[0] = rs.getInt("SID");
-//                columnData[1] = rs.getString("Name");
-//                columnData[2] = rs.getString("Email");
-//                columnData[3] = rs.getString("Phone");
-//                columnData[4] = rs.getString("Address");
-//                columnData[5] = rs.getString("DOB");
-//                columnData[6] = rs.getString("Uname");
-//                columnData[7] = rs.getString("Password");
-//                
-//                defaultTableModel.addRow(columnData);
-//            }
-//        } catch (SQLException e) {
-//            JOptionPane.showMessageDialog(null, e);
-//        }
-//
-//    }
+
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -352,13 +323,7 @@ public class updatebuyer extends javax.swing.JFrame {
                         + "Product='" + jTextField1.getText() + "',Quantity='" + jTextField2.getText() + "',"
                         + "Rate='" + jTextField3.getText() + "'Where BID=" + jTextField15.getText();
              
-               /* String sql = "UPDATE buyer"
-                        + "SET Name=" + jTextField5.getText() + ",Address=" + jTextField6.getText() + ",Email=" + jTextField4.getText() + 
-                         "Product=" + jTextField1.getText() + ",Quantity=" + jTextField2.getText() + ",Rate=" + jTextField3.getText() + "Where BID=" + jTextField15.getText();*/
-                /*
-String sql = "UPDATE buyer SET Name='" + jTextField5.getText() + "',Address='" + jTextField6.getText() + "',Email='" + jTextField4.getText() + "',
-        + ","+ "Product='" + jTextField1.getText() + "'Quantity='" + jTextField2.getText() + "',"
-                        + "Rate='" + jTextField3.getText() + "' Where BID=" + jTextField15.getText();*/
+               
 
                 connection = Connector.ConnectDb();
                 Statement st;
@@ -403,6 +368,7 @@ String sql = "UPDATE buyer SET Name='" + jTextField5.getText() + "',Address='" +
             jLabel8.setText("This field only accepts numbers");
         } else {
             jTextField2.setEditable(true);
+            jLabel8.setText("");
         }
     }//GEN-LAST:event_jTextField2KeyPressed
 
@@ -414,6 +380,7 @@ String sql = "UPDATE buyer SET Name='" + jTextField5.getText() + "',Address='" +
             jLabel9.setText("This field only accepts numbers");
         } else {
             jTextField3.setEditable(true);
+            jLabel9.setText("");
         }
     }//GEN-LAST:event_jTextField3KeyPressed
     

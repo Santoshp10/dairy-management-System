@@ -99,7 +99,7 @@ public class addbuyer extends javax.swing.JFrame {
             .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanel6.setBackground(new java.awt.Color(0, 204, 204));
+        jPanel6.setBackground(new java.awt.Color(0, 153, 153));
         jPanel6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanel6MouseClicked(evt);
@@ -188,9 +188,6 @@ public class addbuyer extends javax.swing.JFrame {
         jTextField6.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jTextField6KeyPressed(evt);
-            }
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                jTextField6KeyReleased(evt);
             }
         });
 
@@ -395,12 +392,9 @@ public class addbuyer extends javax.swing.JFrame {
             jLabel6.setText("This field only accepts numbers");
         } else {
             jTextField5.setEditable(true);
+            jLabel6.setText("");
         }
     }//GEN-LAST:event_jTextField5KeyPressed
-
-    private void jTextField6KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField6KeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6KeyReleased
 
     private void jTextField6KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField6KeyPressed
         // TODO add your handling code here:
@@ -410,6 +404,7 @@ public class addbuyer extends javax.swing.JFrame {
             jLabel7.setText("This field only accepts numbers");
         } else {
             jTextField6.setEditable(true);
+            jLabel7.setText("");
         }
     }//GEN-LAST:event_jTextField6KeyPressed
 

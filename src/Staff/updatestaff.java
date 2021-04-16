@@ -469,6 +469,7 @@ public class updatestaff extends javax.swing.JFrame {
             jLabel1.setText("This field only accepts numbers");
         } else {
             jTextField3.setEditable(true);
+            jLabel1.setText("");
         }
     }//GEN-LAST:event_jTextField3KeyPressed
 

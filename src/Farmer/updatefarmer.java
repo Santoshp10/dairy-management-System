@@ -381,6 +381,7 @@ farmeractivity pActivity = new farmeractivity();
             jLabel7.setText("This field only accepts numbers");
         } else {
             jTextField4.setEditable(true);
+            jLabel7.setText("");
         }
         
     }//GEN-LAST:event_jTextField4KeyPressed

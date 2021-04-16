@@ -331,6 +331,7 @@ public class addfarmer extends javax.swing.JFrame {
             jLabel8.setText("This field only accepts numbers");
         } else {
             jTextField3.setEditable(true);
+            jLabel8.setText("");
         }
     }//GEN-LAST:event_jTextField3KeyPressed
 

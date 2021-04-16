@@ -391,6 +391,7 @@ public class addstaff extends javax.swing.JFrame {
             jLabel7.setText("This field only accepts numbers");
         } else {
             jTextField4.setEditable(true);
+            jLabel7.setText("");
         }
     }//GEN-LAST:event_jTextField4KeyPressed
 
