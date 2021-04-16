@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 15, 2021 at 03:23 PM
+-- Generation Time: Apr 16, 2021 at 03:58 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.3.27
 
@@ -191,22 +191,18 @@ INSERT INTO `farmer` (`FID`, `FName`, `LName`, `Contact`, `Address`) VALUES
 --
 
 CREATE TABLE `product` (
-  `PID` int(11) NOT NULL,
-  `Name` char(100) NOT NULL,
-  `Type` varchar(100) NOT NULL,
-  `Rate` varchar(100) NOT NULL
+  `PID` int(100) NOT NULL,
+  `Name` varchar(255) NOT NULL,
+  `Quantity` int(100) NOT NULL,
+  `Rate` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`PID`, `Name`, `Type`, `Rate`) VALUES
-(1, 'Cow\'s Milk', 'Milk', '70'),
-(2, 'KJH', 'H', 'JBHJ'),
-(4, 'KJH', 'H', 'JBHJ'),
-(5, 'HJBJHBHB', 'JKHB', 'JHB'),
-(8, 'Milk', 'Flavored', '110');
+INSERT INTO `product` (`PID`, `Name`, `Quantity`, `Rate`) VALUES
+(8, 'Milk', 40, 75);
 
 -- --------------------------------------------------------
 
@@ -305,7 +301,7 @@ ALTER TABLE `farmer`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `PID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `PID` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `staff`
