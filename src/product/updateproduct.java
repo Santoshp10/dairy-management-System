@@ -89,6 +89,7 @@ public class updateproduct extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jTextField4 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Update product");
@@ -143,7 +144,7 @@ public class updateproduct extends javax.swing.JFrame {
 
         jLabel3.setText("Name");
 
-        jLabel4.setText("Type");
+        jLabel4.setText("Quantity");
 
         jLabel6.setText("Rate");
 
@@ -151,6 +152,12 @@ public class updateproduct extends javax.swing.JFrame {
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
+            }
+        });
+
+        jTextField6.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextField6KeyPressed(evt);
             }
         });
 
@@ -167,6 +174,8 @@ public class updateproduct extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+
+        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -190,7 +199,9 @@ public class updateproduct extends javax.swing.JFrame {
                             .addComponent(jTextField15, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
                             .addComponent(jTextField4)
                             .addComponent(jTextField6)
-                            .addComponent(jTextField5)))
+                            .addComponent(jTextField5))
+                        .addGap(46, 46, 46)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(408, 408, 408)
                         .addComponent(jButton2)
@@ -216,7 +227,8 @@ public class updateproduct extends javax.swing.JFrame {
                         .addGap(25, 25, 25)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1))
                         .addGap(31, 31, 31)
                         .addComponent(jLabel6))
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -258,7 +270,7 @@ public class updateproduct extends javax.swing.JFrame {
             while (rs.next())
             {
                 jTextField5.setText(rs.getString("Name"));
-                jTextField6.setText(rs.getString("Type"));
+                jTextField6.setText(rs.getString("Quantity"));
                
                
                 jTextField4.setText(rs.getString("Rate"));
@@ -304,7 +316,7 @@ public class updateproduct extends javax.swing.JFrame {
             try{
 
             String sql = "UPDATE product "
-                + " SET Name='"+jTextField5.getText()+"',Type='"+jTextField6.getText()+"',"
+                + " SET Name='"+jTextField5.getText()+"',Quantity='"+jTextField6.getText()+"',"
                 + "Rate='"+jTextField4.getText()+"'Where PID="+jTextField15.getText();
 
                 
@@ -346,6 +358,17 @@ public class updateproduct extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton3ActionPerformed
     }
+    private void jTextField6KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField6KeyPressed
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if(Character.isLetter(c)){
+            jTextField6.setEditable(false);
+            jLabel1.setText("This field only accepts numbers");
+        } else {
+            jTextField6.setEditable(true);
+        }
+    }//GEN-LAST:event_jTextField6KeyPressed
+    
     /**
      * @param args the command line arguments
      */
@@ -390,6 +413,7 @@ public class updateproduct extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
