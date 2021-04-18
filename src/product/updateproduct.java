@@ -1,6 +1,5 @@
 package product;
 
-
 import Main.Connector;
 
 import java.awt.HeadlessException;
@@ -32,7 +31,6 @@ public class updateproduct extends javax.swing.JFrame {
     String DOB;
     String Uname;
     String Password;
-
 
     public updateproduct() {
         initComponents();
@@ -91,6 +89,7 @@ public class updateproduct extends javax.swing.JFrame {
         jTextField4 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Update product");
@@ -186,6 +185,10 @@ public class updateproduct extends javax.swing.JFrame {
 
         jLabel5.setForeground(new java.awt.Color(255, 0, 0));
 
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -217,7 +220,10 @@ public class updateproduct extends javax.swing.JFrame {
                         .addGap(408, 408, 408)
                         .addComponent(jButton2)
                         .addGap(162, 162, 162)
-                        .addComponent(jButton3)))
+                        .addComponent(jButton3))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(104, 104, 104)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -245,7 +251,9 @@ public class updateproduct extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel5)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2)
@@ -258,123 +266,128 @@ public class updateproduct extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
-    
+
     }//GEN-LAST:event_jLabel20MouseClicked
 
     private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
- proactivity paActivity = new proactivity();
+        proactivity paActivity = new proactivity();
         paActivity.setVisible(true);
         dispose();
     }//GEN-LAST:event_jLabel21MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       Boolean Data=false;
+        Boolean Data = false;
+        if (jTextField15.getText().trim().isEmpty()) {
+            jLabel7.setText("PID cannot be empty");
+        } else {
 
-   
-             String SID=jTextField15.getText();
+            String SID = jTextField15.getText();
 
-        try{
- connection = Connector.ConnectDb();
-            ps = connection.prepareStatement("select * from product where PID=?");
+            try {
+                connection = Connector.ConnectDb();
+                ps = connection.prepareStatement("select * from product where PID=?");
 
-            ps.setString(1, SID);
-            rs = ps.executeQuery();
+                ps.setString(1, SID);
+                rs = ps.executeQuery();
 
-            while (rs.next())
-            {
-                jTextField5.setText(rs.getString("Name"));
-                jTextField6.setText(rs.getString("Quantity"));
-               
-               
-                jTextField4.setText(rs.getString("Rate"));
-                
+                while (rs.next()) {
+                    jTextField5.setText(rs.getString("Name"));
+                    jTextField6.setText(rs.getString("Quantity"));
 
-                Data=true;
+                    jTextField4.setText(rs.getString("Rate"));
+
+                    Data = true;
+                }
+            } catch (SQLException | HeadlessException ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            } finally {
+                try {
+
+                    ps.close();
+                    rs.close();
+
+                } catch (Exception e) {
+
+                }
+
             }
         }
 
-        catch(SQLException | HeadlessException ex){
-            JOptionPane.showMessageDialog(null, ex);
-        }
-
-        finally
-        {
-            try
-            {
-
-                ps.close();
-                rs.close();
-
-            }
-            catch(Exception e)
-            {
-
-            }
-
-        }
-
-        if(Data==false)
-        {
+        if (Data == false) {
             JOptionPane.showMessageDialog(null, "registration no is invalid");
             jTextField15.setText("enter valid registration no");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
- Boolean Data=true;
 
-        if(Data==true)
-        {
+        if (jTextField15.getText().trim().isEmpty() && jTextField4.getText().trim().isEmpty() && jTextField5.getText().trim().isEmpty() && jTextField6.getText().trim().isEmpty()) {
+            jLabel7.setText("field(s) cannot be empty");
+        } else if (jTextField15.getText().trim().isEmpty()) {
+            jLabel7.setText("PID name cannot be empty");
+        } else if (jTextField5.getText().trim().isEmpty()) {
+            jLabel7.setText("Name cannot be empty");
+        } else if (jTextField6.getText().trim().isEmpty()) {
+            jLabel7.setText("Quantity cannot be empty");
+        } else if (jTextField4.getText().trim().isEmpty()) {
+            jLabel7.setText("Rate cannot be empty");
+        } else {
 
-            try{
+            Boolean Data = true;
 
-            String sql = "UPDATE product "
-                + " SET Name='"+jTextField5.getText()+"',Quantity='"+jTextField6.getText()+"',"
-                + "Rate='"+jTextField4.getText()+"'Where PID="+jTextField15.getText();
+            if (Data == true) {
 
-                
-       
-                 connection = Connector.ConnectDb();
-                Statement st;
-                
-                st = connection.createStatement();
+                try {
 
-                st.executeUpdate(sql);
+                    String sql = "UPDATE product "
+                            + " SET Name='" + jTextField5.getText() + "',Quantity='" + jTextField6.getText() + "',"
+                            + "Rate='" + jTextField4.getText() + "'Where PID=" + jTextField15.getText();
 
-                JOptionPane.showMessageDialog(null, "updated successfully");
+                    connection = Connector.ConnectDb();
+                    Statement st;
+
+                    st = connection.createStatement();
+
+                    st.executeUpdate(sql);
+
+                    JOptionPane.showMessageDialog(null, "updated successfully");
+
+                } catch (SQLException | HeadlessException ex) {
+                    JOptionPane.showMessageDialog(null, ex);
+                }
 
             }
-            catch(SQLException | HeadlessException ex){
-                JOptionPane.showMessageDialog(null, ex);
-            }
-
         }
-                // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-  Boolean Data=true;
 
-        if(Data==true)
-        {
-        connection = Connector.ConnectDb();
-        String search = jButton3.getText();
-        String sql = "Delete from product where PID =" + jTextField15.getText();
-        try {
-            ps = connection.prepareStatement(sql);
-            ps.execute();
-            JOptionPane.showMessageDialog(null, "product " + search + " has been deleted");
-          
-            connection.close();
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "product named " + search + " not found");
-        }
+        Boolean Data = true;
+        if (jTextField15.getText().trim().isEmpty()) {
+            jLabel7.setText("PID name cannot be empty");
+        } else {
+
+            if (Data == true) {
+                connection = Connector.ConnectDb();
+                String search = jButton3.getText();
+                String sql = "Delete from product where PID =" + jTextField15.getText();
+                try {
+                    ps = connection.prepareStatement(sql);
+                    ps.execute();
+                    JOptionPane.showMessageDialog(null, "product " + search + " has been deleted");
+
+                    connection.close();
+                } catch (SQLException e) {
+                    JOptionPane.showMessageDialog(null, "product named " + search + " not found");
+                }
+            }
     }//GEN-LAST:event_jButton3ActionPerformed
     }
     private void jTextField6KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField6KeyPressed
         // TODO add your handling code here:
         char c = evt.getKeyChar();
-        if(Character.isLetter(c)){
+        if (Character.isLetter(c)) {
             jTextField6.setEditable(false);
             jLabel1.setText("This field only accepts numbers");
         } else {
@@ -386,7 +399,7 @@ public class updateproduct extends javax.swing.JFrame {
     private void jTextField4KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField4KeyPressed
         // TODO add your handling code here:
         char c = evt.getKeyChar();
-        if(Character.isLetter(c)){
+        if (Character.isLetter(c)) {
             jTextField4.setEditable(false);
             jLabel5.setText("This field only accepts numbers");
         } else {
@@ -394,7 +407,7 @@ public class updateproduct extends javax.swing.JFrame {
             jLabel5.setText("");
         }
     }//GEN-LAST:event_jTextField4KeyPressed
-    
+
     /**
      * @param args the command line arguments
      */
@@ -433,7 +446,7 @@ public class updateproduct extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(() -> {
             new updateproduct().setVisible(true);
         });
-    
+
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -448,6 +461,7 @@ public class updateproduct extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField4;
@@ -455,5 +469,4 @@ public class updateproduct extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
 
-    
 }
