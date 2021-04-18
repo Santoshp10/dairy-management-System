@@ -35,6 +35,7 @@ public class Staff extends javax.swing.JFrame {
         rPassField = new javax.swing.JPasswordField();
         rExitBtn = new javax.swing.JButton();
         rLoginBtn = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Staff");
@@ -56,15 +57,32 @@ public class Staff extends javax.swing.JFrame {
         dUser.setText("Username:");
         getContentPane().add(dUser);
         dUser.setBounds(262, 168, 116, 29);
+
+        rUserField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rUserFieldActionPerformed(evt);
+            }
+        });
+        rUserField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                rUserFieldKeyPressed(evt);
+            }
+        });
         getContentPane().add(rUserField);
         rUserField.setBounds(388, 168, 279, 29);
 
         plbl.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         plbl.setText("Password:");
         getContentPane().add(plbl);
-        plbl.setBounds(261, 302, 109, 29);
+        plbl.setBounds(270, 250, 109, 29);
+
+        rPassField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                rPassFieldKeyPressed(evt);
+            }
+        });
         getContentPane().add(rPassField);
-        rPassField.setBounds(388, 302, 279, 29);
+        rPassField.setBounds(390, 250, 279, 29);
 
         rExitBtn.setBackground(new java.awt.Color(0, 153, 153));
         rExitBtn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -78,7 +96,7 @@ public class Staff extends javax.swing.JFrame {
             }
         });
         getContentPane().add(rExitBtn);
-        rExitBtn.setBounds(350, 410, 91, 30);
+        rExitBtn.setBounds(300, 410, 91, 30);
 
         rLoginBtn.setBackground(new java.awt.Color(0, 153, 153));
         rLoginBtn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -90,7 +108,13 @@ public class Staff extends javax.swing.JFrame {
             }
         });
         getContentPane().add(rLoginBtn);
-        rLoginBtn.setBounds(540, 410, 91, 30);
+        rLoginBtn.setBounds(550, 410, 91, 30);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(190, 320, 550, 40);
 
         pack();
         setLocationRelativeTo(null);
@@ -103,31 +127,63 @@ public class Staff extends javax.swing.JFrame {
     }//GEN-LAST:event_rExitBtnActionPerformed
 
     private void rLoginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rLoginBtnActionPerformed
-        connection = Connector.ConnectDb();
-        String user = rUserField.getText();
-        String pass = String.valueOf(rPassField.getPassword());
-        try {
-            String sql = "select login , Password from staff where login='" + user + "'";
-            prp = connection.prepareStatement(sql);
-            result = prp.executeQuery();
-            result.first();
-            if (pass.equals(result.getString("Password"))) {
-                Dashboard rActivity = new Dashboard();
-                rActivity.setVisible(true);
-                username = user;
-                rActivity.username = username;
-                JOptionPane.showMessageDialog(null, "Login Succesful", "Welcome " + user, JOptionPane.INFORMATION_MESSAGE);
-                dispose();
-                connection.close();
-            } else {
-                JOptionPane.showMessageDialog(null, "Login Failed", "Error", JOptionPane.WARNING_MESSAGE);
-            }
+        if (rUserField.getText().trim().isEmpty() && rPassField.getText().trim().isEmpty()) {
+            jLabel1.setText("Username and Password fields cannot be empty");
+        } else if (rUserField.getText().trim().isEmpty()) {
+            jLabel1.setText("Username cannot be empty");
+        } else if (rPassField.getText().trim().isEmpty()) {
+            jLabel1.setText("Password cannot be empty");
+        } else {
+            
+            connection = Connector.ConnectDb();
+            String user = rUserField.getText();
+            String pass = String.valueOf(rPassField.getPassword());
+            try {
+                String sql = "select login , Password from staff where login='" + user + "'";
+                prp = connection.prepareStatement(sql);
+                result = prp.executeQuery();
+                result.first();
+                if (pass.equals(result.getString("Password"))) {
+                    Dashboard rActivity = new Dashboard();
+                    rActivity.setVisible(true);
+                    username = user;
+                    rActivity.username = username;
+                    JOptionPane.showMessageDialog(null, "Login Succesful", "Welcome " + user, JOptionPane.INFORMATION_MESSAGE);
+                    dispose();
+                    connection.close();
+                } else {
+                    if (rUserField.getText().trim().isEmpty() && rPassField.getText().trim().isEmpty()) {
+                        jLabel1.setText("Username and Password fields cannot be empty");
+                    } else if (rUserField.getText().trim().isEmpty()) {
+                        jLabel1.setText("Username cannot be empty");
+                    } else if (rPassField.getText().trim().isEmpty()) {
+                        jLabel1.setText("Password cannot be empty");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Login Failed", "Error", JOptionPane.WARNING_MESSAGE);
+                    }
+                }
 
-        } catch (HeadlessException | SQLException e) {
-            System.out.println(e.getMessage());
-            JOptionPane.showMessageDialog(null, "User or Password wrong.");
+            } catch (HeadlessException | SQLException e) {
+                
+                System.out.println(e.getMessage());
+                JOptionPane.showMessageDialog(null, "The Username or Password is incorrect.");
+            }
         }
     }//GEN-LAST:event_rLoginBtnActionPerformed
+
+    private void rUserFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rUserFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rUserFieldActionPerformed
+
+    private void rUserFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rUserFieldKeyPressed
+        // TODO add your handling code here:
+        jLabel1.setText("");
+    }//GEN-LAST:event_rUserFieldKeyPressed
+
+    private void rPassFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rPassFieldKeyPressed
+        // TODO add your handling code here:
+        jLabel1.setText("");
+    }//GEN-LAST:event_rPassFieldKeyPressed
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(() -> {
             new Staff().setVisible(true);
@@ -136,6 +192,7 @@ public class Staff extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel dUser;
+    private javax.swing.JLabel jLabel1;
     private java.awt.Label mLabel;
     private javax.swing.JLabel plbl;
     private javax.swing.JButton rExitBtn;
