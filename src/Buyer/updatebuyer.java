@@ -78,7 +78,7 @@ public class updatebuyer extends javax.swing.JFrame {
 
         jLabel14.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setText("Update Buyer");
+        jLabel14.setText("Manage Buyer");
 
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/cross.png"))); // NOI18N
         jLabel20.addMouseListener(new java.awt.event.MouseAdapter() {

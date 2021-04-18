@@ -27,7 +27,7 @@ public class viewstaff extends javax.swing.JFrame {
         ImageIcon ic = new ImageIcon(getClass().getResource("/Images/Dairy.png"));
         this.setIconImage(ic.getImage());
 
-        Object columns[] = {"SID","Name","address","email","contact","dob","dob","Password"};
+        Object columns[] = {"SID","Name","address","email","contact","dob","Password"};
         defaultTableModel.setColumnIdentifiers(columns);
         pTable.setModel(defaultTableModel);
 
@@ -47,9 +47,8 @@ public class viewstaff extends javax.swing.JFrame {
                 columnData[2] = rs.getString("address");
                 columnData[3] = rs.getString("email");
                 columnData[4] = rs.getString("contact");
-                columnData[5] = rs.getString("dob");
-                columnData[6] = rs.getString("login");
-                columnData[7] = rs.getString("Password");
+                columnData[5] = rs.getString("login");
+                columnData[6] = rs.getString("Password");
                 
                 
                

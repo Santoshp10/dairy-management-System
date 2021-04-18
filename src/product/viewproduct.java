@@ -42,9 +42,9 @@ public class viewproduct extends javax.swing.JFrame {
             Object columnData[] = new Object[11];
             while (rs.next()) {
                 columnData[0] = rs.getInt("PID");
-                columnData[1] = rs.getString("Name");
-                columnData[2] = rs.getString("Quantity");
-                columnData[3] = rs.getString("Rate");
+                columnData[1] = rs.getString("Name");                
+                columnData[2] = rs.getString("Rate");
+                columnData[3] = rs.getString("Quantity");
                
              
                 defaultTableModel.addRow(columnData);
